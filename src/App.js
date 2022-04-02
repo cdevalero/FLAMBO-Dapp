@@ -228,7 +228,8 @@ function App() {
                 color: "var(--accent-text)",
               }}
             >
-              {data.totalSupply} / {CONFIG.MAX_SUPPLY}
+              {/* {data.totalSupply} / {CONFIG.MAX_SUPPLY} */}
+              {CONFIG.MAX_SUPPLY}
             </s.TextTitle>
             <s.TextDescription
               style={{
@@ -237,7 +238,17 @@ function App() {
               }}
             >
               <StyledLink target={"_blank"} href={CONFIG.SCAN_LINK}>
-                {truncate(CONFIG.CONTRACT_ADDRESS, 15)}
+                {/* {truncate(CONFIG.CONTRACT_ADDRESS, 15)} */}
+              </StyledLink>
+            </s.TextDescription>
+            <s.TextDescription
+              style={{
+                textAlign: "center",
+                color: "var(--primary-text)",
+              }}
+            >
+              <StyledLink target={"_blank"} href={CONFIG.MARKETPLACE_LINK}>
+                {CONFIG.MARKETPLACE}
               </StyledLink>
             </s.TextDescription>
             <s.SpacerSmall />
@@ -276,7 +287,7 @@ function App() {
                 </s.TextDescription>
                 <s.SpacerSmall />
                 {blockchain.account === "" ||
-                blockchain.smartContract === null ? (
+                  blockchain.smartContract === null ? (
                   <s.Container ai={"center"} jc={"center"}>
                     <s.TextDescription
                       style={{
@@ -399,7 +410,7 @@ function App() {
               color: "var(--primary-text)",
             }}
           >
-           
+
           </s.TextDescription>
         </s.Container>
       </s.Container>
